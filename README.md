@@ -2,14 +2,14 @@
 This project processes a dataset of Java code mutants, generates labeled pairs for equivalence testing, and evaluates GPT-4’s ability to classify whether two Java mutants are semantically equivalent.
 
 
-📁 Dataset Overview
+## Dataset Overview
 
 - The input is a .rar archive (partitioned_results_TFTPWMN1Complete.rar) containing multiple folders of Java mutant files.
 - Each folder represents a mutation set, with mutants that are functionally equivalent.
 - Java files are named M<ID>.java.
 
 
-🛠️ Project Steps
+## Project Steps
 
 1. Dataset Extraction and File Discovery
 
@@ -36,20 +36,20 @@ This project processes a dataset of Java code mutants, generates labeled pairs f
 - Confusion matrix (optional visualization)
 
 
-🔑 Requirements
+## Requirements
 
 - Install required packages:
 
 	```pip install patool pandas openai scikit-learn matplotlib seaborn```
 
-🔑 OpenAI API Key
+## OpenAI API Key
 
 - Add your GPT-4 API key:
 
 	```openai.api_key = 'your-api-key-here'```
 
 
-📂 Output Files
+## Output Files
 
 - code_db.csv: ID-to-code mappings.
 - pairwise.csv: Labeled mutant pairs.
@@ -57,7 +57,7 @@ This project processes a dataset of Java code mutants, generates labeled pairs f
 - Terminal output: GPT-4 predictions and evaluation scores.
 
 
-📊 Evaluation Example
+## Evaluation Example
 
 After prediction:
 
@@ -68,7 +68,7 @@ Recall:    0.7000
 F1 Score:  0.7241
 
 
-💡 Notes
+## Notes
 The dataset is imbalanced, so prompts ask GPT-4 to avoid classifying everything as one class.
 Code snippets are truncated to a maximum of 30 lines for context management.
 Random sampling ensures variety in testing and few-shot examples.
